@@ -1,0 +1,38 @@
+{
+  "name": "redux-api-model",
+  "version": "0.1.0",
+  "description": "Redux middleware to handle API connectivity and return a object model",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidlighty/redux-api-model.git"
+  },
+  "keywords": [
+    "redux",
+    "api",
+    "http"
+  ],
+  "author": "David Lighty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidlighty/redux-api-model/issues"
+  },
+  "homepage": "https://github.com/davidlighty/redux-api-model#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "jest": "^23.6.0",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2"
+  }
+}
