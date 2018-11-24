@@ -4,6 +4,7 @@ module.exports = {
   presets: [
     [
       '@babel/env',
+      'flow',
       {
         targets: {
           browsers: ['ie >= 11']

@@ -4,7 +4,16 @@
   "description": "Redux middleware to handle API connectivity and return a object model",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "build": "rollup -c",
+    "clean": "rimraf lib dist es coverage",
+    "flow": "flow",
+    "format": "prettier --write \"{src,test}/**/*.{js,ts}\"",
+    "format:check": "prettier --list-different \"{src,test}/**/*.{js,ts}\"",
+    "lint": "eslint src test",
+    "prepare": "npm run clean && npm run format:check && npm run lint && npm test",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "test:cov": "npm test -- --coverage"
   },
   "repository": {
     "type": "git",
@@ -24,18 +33,25 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "cross-env": "^5.2.0",
     "eslint": "^5.9.0",
+    "flow-bin": "^0.86.0",
     "jest": "^23.6.0",
     "prettier": "^1.15.2",
-    "webpack": "^4.26.0",
-    "webpack-cli": "^3.1.2"
+    "rimraf": "^2.6.2",
+    "rollup": "^0.67.3",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-replace": "^2.1.0",
+    "rollup-plugin-terser": "^3.0.0"
   }
 }
